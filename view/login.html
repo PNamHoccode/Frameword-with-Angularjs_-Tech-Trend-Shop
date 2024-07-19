@@ -1,0 +1,27 @@
+<div class="row m-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#!/home">Home</a></li>
+          
+          <li class="breadcrumb-item active" aria-current="page">Đăng nhập tài khoản</li>
+        </ol>
+      </nav>
+</div>
+<div class="login-box" ng-controller="AuthController">
+    
+    <h2>Login</h2>
+    <form name="loginForm" ng-submit="submitForm()" novalidate>
+        <div class="user-box">
+             <label >Username</label>
+             <input type="text" name="txtusername" ng-model="username" required>         
+             <label ng-show="loginForm.txtusername.$invalid"class="alert-danger alter">không vỏ trống username</label>
+        </div>
+        <div class="user-box">
+            <label >Password</label>
+            <input type="password" name="txtpassword" ng-model="password" required> 
+           <label ng-show="loginForm.txtpassword.$invalid" class="alter alert-danger">Password không được bỏ trống</label>
+        </div>
+        
+       <button class="btn btn-success">Đăng Nhập</button>
+    </form>
+</div>

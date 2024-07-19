@@ -1,0 +1,45 @@
+<div class="poly-sheet row">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#!/home">Home</a></li>
+          
+          <li class="breadcrumb-item active" aria-current="page">{{product.name}}</li>
+        </ol>
+      </nav>
+    <article class="col-sm-9">
+       
+        <div class="row text-center" style="margin-top: 10px;">
+            
+            <div class="col-sm-5"> 
+                <img ng-src="{{product.image}}" class="imgchitiet" alt="{{product.name}}">
+            </div>
+            <div class="col-sm-7 py-5" style="margin-top: 10px; font-size: 20px;">
+                <ul style="line-height: 30px; margin-bottom: 15px;">
+                    <li class="title">{{product.name}} <span class="badge badge-primary">VN</span></li>
+                    <li>Đơn giá: {{product.price | currency:"₫"}}</li>
+                    <li>Nhà cung cấp: {{product.provider}}</li>
+                    <li>Chủng loại: {{product.category}}</li>
+                    <li>Hàng mới nhập <span class="badge badge-info" ng-if="product.isNew">ma cao</span></li>
+                    <li>Số lượng:  <span class="badge badge-light">{{product.quantity}}</span></li>
+                    <li>Giảm giá:  <span class="badge badge-dark">{{product.discount}}%</span></li>
+                </ul>
+
+                <!-- Nút Mua ngay và Thêm vào giỏ hàng -->
+                <div class="d-flex align-items-center">
+                    
+                    <button class="muahang" ng-click="buyNow()"><i class="fa-solid fa-money-check-dollar"></i> Mua ngay</button>
+                    <button class="btn btn-success" ng-click="$root.addToCart(product)"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+            
+        </div> 
+        
+    </article>
+    <div class="col-sm-3 py-5">
+        <h3>Thông tin hữu ích</h3>
+        <a href=""><i class="fa-solid fa-screwdriver-wrench"></i> Trung tâm bảo hành</a><br/>
+        <a href=""><i class="fa-solid fa-car-side"></i> Thông tin vận chuyển</a>
+        <br>
+        <a href=""><i class="fa-solid fa-money-bill-wave"></i> Hướng dẫn thanh toán</a>
+    </div>
+</div>

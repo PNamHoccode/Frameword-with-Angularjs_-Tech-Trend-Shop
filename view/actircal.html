@@ -1,0 +1,531 @@
+
+    <body>
+        <section class="mymaincontent my-3"> 
+            <div class="container">
+              <div class="slider mb-3">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <img src="/image/slider_1.webp" class="imgslide" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="/image/slider_6.jpg" class="imgslide" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="/image/slider_5.webp" class="imgslide" class="d-block w-100" alt="...">
+                        </div>
+                    </div>                              
+                    </div>
+                </div>
+              <!--End slider-->
+              <div class="cate-list mb-3">
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <div class="owl-carousel owl-theme">
+                                <div class="item">
+                                    <div class="category-icon">
+                                    <img src="/image/imgsl1.webp" class="img-fluid">
+                                    <h5>Điện Thoại-Máy Tính</h5>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="category-icon">
+                                    <img src="/image/imgsl2.webp" class="img-fluid">
+                                    <h5>Phụ kiện - Thiết bị số</h5>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="category-icon">
+                                    <img src="/image/imgsl3.webp" class="img-fluid">
+                                    <h5>Máy ảnh - Quay phim</h5>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="category-icon">
+                                    <img src="/image/imgsl4.webp" class="img-fluid">
+                                    <h5>Điện gia dụng - Nhà bếp</h5>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="category-icon">
+                                    <img src="/image/icon5.webp" class="img-fluid">
+                                    <h5>Laptop - Thiết bị IT</h5>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="category-icon">
+                                    <img src="/image/icon6.webp" class="img-fluid">
+                                    <h5>Máy chơi game - Trò chơi</h5>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="category-icon">
+                                    <img src="/image/icon7.webp" class="img-fluid">
+                                    <h5>Trang sức - Sành điệu</h5>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="category-icon">
+                                    <img src="/image/icon8.webp" class="img-fluid">
+                                    <h5>Thời trang - Làm đẹp</h5>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="category-icon">
+                                    <img src="/image/icon9s.webp" class="img-fluid">
+                                    <h5>Nhà cửa đời sống</h5>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="category-icon">
+                                    <img src="/image/icon10.webp" class="img-fluid">
+                                    <h5>Sách - Tiểu thuyết</h5>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
+             </div>
+      
+            
+            <!--enslide show-------------------------->
+      
+            <!--Nav Tab------------------------------------>
+            <ul class="nav nav-tabs justify-content-between">
+              <li class="nav-item">
+                  <a class="nav-link active" id="tab1-tab" data-bs-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true"><h2 class=" title-block ">
+                    <Strong >Công Nghệ</Strong>
+                  </h2></a>
+              </li>
+              <li class="nav-item" >
+                  <a class="nav-link" id="tab2-tab" data-bs-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false"><h2 class=" title-block ">
+                    <Strong  class="bg-info" >Thời Trang</Strong>
+                  </h2></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" id="tab3-tab" data-bs-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false"><h2 class=" title-block ">
+                    <Strong class="bg-success"  >Gia Dụng</Strong>
+                  </h2></a>
+              </li>
+          </ul>
+            
+  <div class="tab-content mt-3 " >
+    <div class="tab-pane fade show active "  id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+      
+      <div class="product_list-s py-3 " ng-controller="PhoneController">
+        <div class="row">
+
+            <div class="col-md-3 mb-3" ng-repeat="product in phoneProducts">
+              <form>
+                  <div class="position-relative" data-product-id="{{product.id}}">
+                      <!-- Các phần tử sản phẩm tương tự như trong mã HTML của bạn -->
+                      <div class="img-container" ng-click="toggleHeart(this)">
+                          <div class="heart-icon">
+                              <!-- Biểu tượng trái tim -->
+                          </div>
+                          <img ng-src="{{product.image}}" alt="Product Image" class="img-fluid">
+                      </div>
+                      <span class="badge bg-warning position-absolute top-0 start-0">
+                          <!-- Biểu tượng giảm giá -->
+                          <h6>Giảm giá</h6>
+                          <h6>{{product.discount}}%</h6>
+                      </span>
+                      <h3 class="product-name">
+                          <a href="/{{product.name}}" title="{{product.name}}">{{product.name}}</a>
+                      </h3>
+                      <div class="price-box">
+                          <span class="price">{{product.price | currency:"₫"}}</span><br>
+                          <span class="compare-price">{{product.comparePrice | currency:"₫"}}</span>
+                          <button type="button" class="btn btn-primary" ng-click="addToCart(product.name, product.price, product.image)">
+                             +
+                          </button>
+                      </div>
+                  </div>
+              </form>
+          </div>                 
+        </div>
+        </div>
+    </div>
+    <!--Tab2----------->
+    <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+      <div class="product_list-s py-3" ng-controller="ShoeController">
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+               
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                  <img src="/image/banner_fashion_1.webp" class="imgss" alt="...">
+                  
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img src="/image/banner_fashion_2.webp" class="imgss" alt="...">
+                 
+                </div>
+                
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-md-3 mb-3" ng-repeat="product in shoeProducts">
+            <form>
+                <div class="position-relative" data-product-id="{{product.id}}">
+                    <!-- Các phần tử sản phẩm tương tự như trong mã HTML của bạn -->
+                    <div class="img-container" ng-click="toggleHeart(this)">
+                        <div class="heart-icon">
+                            <!-- Biểu tượng trái tim -->
+                        </div>
+                        <img ng-src="{{product.image}}" alt="Product Image" class="img-fluid">
+                    </div>
+                    <span class="badge bg-warning position-absolute top-0 start-0">
+                        <!-- Biểu tượng giảm giá -->
+                        <h6>Giảm giá</h6>
+                        <h6>{{product.discount}}%</h6>
+                    </span>
+                    <h3 class="product-name">
+                        <a href="/{{product.name}}" title="{{product.name}}">{{product.name}}</a>
+                    </h3>
+                    <div class="price-box">
+                        <span class="price">{{product.price | currency:"₫"}}</span><br>
+                        <span class="compare-price">{{product.comparePrice | currency:"₫"}}</span>
+                        <button type="button" class="btn btn-primary" ng-click="addToCart(product.name, product.price, product.image)">
+                           +
+                        </button>
+                    </div>
+                </div>
+            </form>
+          </div>                 
+        </div>
+        </div>
+    </div>
+    
+    <!--tab3----------------->
+        <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+          <div class="product_list-s py-3" ng-controller="GiadungCtrl">
+                <div class="row">
+        <div   div class="col-md-3 mb-3">
+          <img src="/image/banner_3_tab.webp" alt="">
+        </div>
+  
+        <div class="col-md-3 mb-3" ng-repeat="product in GdProducts">
+          <form>
+              <div class="position-relative" data-product-id="{{product.id}}">
+                  <!-- Các phần tử sản phẩm tương tự như trong mã HTML của bạn -->
+                  <div class="img-container" ng-click="toggleHeart(this)">
+                      <div class="heart-icon">
+                          <!-- Biểu tượng trái tim -->
+                      </div>
+                      <img ng-src="{{product.image}}" alt="Product Image" class="img-fluid">
+                  </div>
+                  <span class="badge bg-warning position-absolute top-0 start-0">
+                      <!-- Biểu tượng giảm giá -->
+                      <h6>Giảm giá</h6>
+                      <h6>{{product.discount}}%</h6>
+                  </span>
+                  <h3 class="product-name">
+                      <a href="/{{product.name}}" title="{{product.name}}">{{product.name}}</a>
+                  </h3>
+                  <div class="price-box">
+                      <span class="price">{{product.price | currency:"₫"}}</span><br>
+                      <span class="compare-price">{{product.comparePrice | currency:"₫"}}</span>
+                      <button type="button" class="btn btn-primary" ng-click="addToCart(product.name, product.price, product.image)">
+                         +
+                      </button>
+                  </div>
+              </div>
+          </form>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+            
+            
+          <!--End  nav-tab-->
+         
+          <!--End cate-List------------------------------------------------------------------->
+          <div class="product_list mb-3">
+              <div class="row">
+                    <div class="col-md-4">
+                        <h2 class=" title-block ">
+                            <Strong  >Thời Trang</Strong>
+                        </h2>
+                    
+                    </div>
+                    <div class="col-md-8">
+                        <ul>
+                            <li>
+                            <a href="/thoi-trang-nu" title="Thời trang nữ">Thời trang nữ</a>
+                            </li>
+                            <li>
+                            <a href="/thoi-trang-nam" title="Thời trang nam">Thời trang nam</a>
+                            </li>
+                            <li>
+                            <a href="/dong-ho-trang-suc" title="Đồng hồ &amp; Trang sức">Đồng hồ &amp; Trang sức</a>
+                            </li>
+                            <li>
+                            <a href="/giay-dep-nu" title="Giày dép nữ">Giày dép nữ</a>
+                            </li>
+                            <li>
+                            <a href="/giay-dep-nam" title="Giày dép nam">Giày dép nam</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+          </div>
+            <div class="product_list-s py-3" ng-controller="ShoeController">
+              <div class="row">
+                    <div class="col-md-3 mb-3">
+                      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="/image/banner_fashion_1.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="/image/banner_fashion_2.webp" class="d-block w-100" alt="...">
+                          </div>
+                          
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+        
+                    <div class="col-md-3 mb-3" ng-repeat="product in shoeProducts">
+                      <form>
+                          <div class="position-relative" data-product-id="{{product.id}}">
+                              <!-- Các phần tử sản phẩm tương tự như trong mã HTML của bạn -->
+                              <div class="img-container" ng-click="toggleHeart(this)">
+                                  <div class="heart-icon">
+                                      <!-- Biểu tượng trái tim -->
+                                  </div>
+                                  <img ng-src="{{product.image}}" alt="Product Image" class="img-fluid">
+                              </div>
+                              <span class="badge bg-warning position-absolute top-0 start-0">
+                                  <!-- Biểu tượng giảm giá -->
+                                  <h6>Giảm giá</h6>
+                                  <h6>{{product.discount}}%</h6>
+                              </span>
+                              <h3 class="product-name">
+                                  <a href="/{{product.name}}" title="{{product.name}}">{{product.name}}</a>
+                              </h3>
+                              <div class="price-box">
+                                  <span class="price">{{product.price | currency:"₫"}}</span><br>
+                                  <span class="compare-price">{{product.comparePrice | currency:"₫"}}</span>
+                                  <button type="button" class="btn btn-primary" ng-click="addToCart(product.name, product.price, product.image)">
+                                      Add to Cart
+                                  </button>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+            </div>
+        </div>
+          
+          <!-- end Thời Trang-->
+       
+            <div class="product_list mb-3 mt-4">
+                <div class="row" >
+                    <div class="col-md-4">
+                    <h2 class=" title-block ">
+                        <Strong  >Đồ Công Nghệ</Strong>
+                    </h2>
+                </div>
+                <div class="col-md-8">
+                    <ul>
+                        <li>
+                        <a href="/dien-thoai-may-tinh-bang" title="Điện thoại - Máy tính bảng">Điện thoại - Máy tính bảng</a>
+                        </li>
+                        <li>
+                        <a href="/phu-kien-thiet-bi-so" title="Phụ kiện - Thiết bị số">Phụ kiện - Thiết bị số</a>
+                        </li>
+                        <li>
+                        <a href="/may-anh-quay-phim" title="Máy ảnh - Quay phim">Máy ảnh - Quay phim</a>
+                        </li>
+                        <li>
+                        <a href="/dien-gia-dung-nha-bep" title="Điện gia dụng - Nhà bếp">Điện gia dụng - Nhà bếp</a>
+                        </li>
+                        <li>
+                        <a href="/laptop-thiet-bi-it" title="Laptop - Thiết bị IT">Laptop - Thiết bị IT</a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="product_list-s py-3 " ng-controller="PhoneController">
+                <div class="row">
+
+                    <div class="col-md-3 mb-3" ng-repeat="product in phoneProducts">
+                      <form>
+                          <div class="position-relative" data-product-id="{{product.id}}">
+                              <!-- Các phần tử sản phẩm tương tự như trong mã HTML của bạn -->
+                              <div class="img-container" ng-click="toggleHeart(this)">
+                                  <div class="heart-icon">
+                                      <!-- Biểu tượng trái tim -->
+                                  </div>
+                                  <img ng-src="{{product.image}}" alt="Product Image" class="img-fluid">
+                              </div>
+                              <span class="badge bg-warning position-absolute top-0 start-0">
+                                  <!-- Biểu tượng giảm giá -->
+                                  <h6>Giảm giá</h6>
+                                  <h6>{{product.discount}}%</h6>
+                              </span>
+                              <h3 class="product-name">
+                                  <a href="/{{product.name}}" title="{{product.name}}">{{product.name}}</a>
+                              </h3>
+                              <div class="price-box">
+                                  <span class="price">{{product.price | currency:"₫"}}</span><br>
+                                  <span class="compare-price">{{product.comparePrice | currency:"₫"}}</span>
+                                  <!-- <button type="button" class="btn btn-primary" ng-click="addToCart(product.name, product.price, product.image)">
+                                      Add to Cart
+                                  </button> -->
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+                          
+                </div>
+          </div>
+    
+          <div class="product_list mb-3 mt-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2 class=" title-block ">
+                        <Strong  >Tin Tức Mới nhất</Strong>
+                        </h2>           
+                    </div>
+                    <div class="col-md-8">
+                            <ul>
+                            <li>
+                                <a href="/dien-thoai-may-tinh-bang" title="Điện thoại - Máy tính bảng">Điện thoại - Máy tính bảng</a>
+                            </li>
+                            <li>
+                                <a href="/phu-kien-thiet-bi-so" title="Phụ kiện - Thiết bị số">Phụ kiện - Thiết bị số</a>
+                            </li>
+                            <li>
+                                <a href="/may-anh-quay-phim" title="Máy ảnh - Quay phim">Máy ảnh - Quay phim</a>
+                            </li>
+                            <li>
+                                <a href="/dien-gia-dung-nha-bep" title="Điện gia dụng - Nhà bếp">Điện gia dụng - Nhà bếp</a>
+                            </li>
+                            <li>
+                                <a href="/laptop-thiet-bi-it" title="Laptop - Thiết bị IT">Laptop - Thiết bị IT</a>
+                            </li>
+                            </ul>
+                        </div>
+                </div>
+          </div>
+      
+        <div class="product_list-s py-3 ">
+            <div class="row py-3">
+                    <div class="col-md-4">
+                        <div class="jumbotron ">
+                        <p>
+                        <h1 class="display-4 ">
+                            <img src="/image/galaxy-fold-black-home-screen-open.webp" class="img-fluid"></h1>
+                        <span class="badge bg-warning">Tin Tưc</span></h2>
+                        </p> 
+                        <p class="lead">Galaxy Z Fold 3 và Z Flip 3 sẽ có giá rẻ hơn</p>
+                        
+                        <p>Hai smartphone đắt nhất của Samsung sẽ có giá rẻ hơn 400 USD so với thế hệ trước.</p>
+                        <p class="lead">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="right" title="Nhấn Để Đọc Thêm Tin Tức">
+                            <a class="btn btn-primary btn-lg" href="https://www.nguyenkim.com/review-samsung-galaxy-z-fold-3.html" role="button">xem them</a>
+            
+                            </button>
+                        </p>
+                        </div>
+                    </div>
+                
+      
+                <div class="col-md-4">
+                        <div class="jumbotron ">
+                        <p>
+                        <h1 class="display-4 ">
+                            <img src="/image/bun-rieu-da-lat-1.webp" class="img-fluid"></h1>
+                        <span class="badge bg-warning">Đời Sống</span></h2>
+                        </p> 
+                        <p class="lead">Cách làm bún sườn nấu sấu thanh mát</p>
+                        
+                        <p>Bún sườn nấu sấu là món ăn này rất hợp với mùa hè bởi cách làm và nguyên liệu đơn giản</p>
+                        <p class="lead">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="right" title="Nhấn Để Đọc Thêm Chi Tiết ">
+                            <a class="btn btn-primary btn-lg" href="https://www.dienmayxanh.com/vao-bep/cach-nau-bun-rieu-cua-dong-ngon-tuyet-de-lam-tai-nha-00980" role="button">xem them</a>
+                            </button>
+                        </p>
+                        </div>
+                </div>
+      
+            
+                <div class="col-md-4">
+                    <div class="jumbotron ">
+                        <p>
+                        <h1 class="display-4 ">
+                            <img src="/image/khuyen-mai-viettel-31-08.webp" class="img-fluid"></h1>
+                        <span class="badge bg-warning">Khuyến Mãi</span></h2>
+                        </p> 
+                        <p class="lead">Viettel đang tặng người dùng 3GB truy cập Internet miễn phí, áp dụng cho tất</p>
+                        
+                        <p>Rạng sáng nay (15/10/2019), Viettel đã bất ngờ dành tặng 1 triệu gói data ST15K miễn</p>
+                        <p class="lead">
+                            
+                            <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="right" title="Nhấn Để Đọc Thêm Chi Tiết khuyến Mãi ">
+                            <a class="btn btn-primary btn-lg" href="https://www.nguyenkim.com/review-samsung-galaxy-z-fold-3.html" role="button">xem them</a>
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        
+          
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                        </li>
+                </ul>
+            </nav>  
+         </div>
+     </section>
+</body>

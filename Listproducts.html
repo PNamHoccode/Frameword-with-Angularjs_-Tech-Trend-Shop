@@ -1,0 +1,88 @@
+
+<div class="container"ng-controller="MyController">
+	<div class="row" >
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#!/home">Home</a></li>
+              <li class="breadcrumb-item"><a href="#!/Listproducts">sản phẩm</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Tấ cả sản phẩm</li>
+            </ol>
+          </nav>
+        
+		<div class="col-md-3">
+			<table class="table table-light">
+				<thead class="thead-light">
+					<tr>
+						<th>Danh mục</th>
+					</tr>
+				</thead>
+				<tbody>
+                    <tr ng-repeat="category in categories">
+                        <td>
+                            <img ng-src="{{category.image}}" width="50px" alt="Your Image">
+                        </td>
+                        <td>
+                             <a class="category" href="#"><p>{{category.name}}</p></a>
+                        </td>
+                    </tr>
+					
+				</tbody>
+				
+			</table>
+		</div>
+		<div class="col-md-9">
+			<div class="product_list-s py-3 " ng-controller="myyCtrl">
+                <div class="row">
+                    <div class="sort-button">
+                    <button ng-click="setSortOrder('name', false)" class="btn btn-sm btn-warning">Sắp xếp A-Z</button>
+                    <button ng-click="setSortOrder('name', true)" class="btn btn-sm btn-warning">Sắp xếp Z-A</button>
+                    <button ng-click="setSortOrder('price', false)" class="btn btn-sm btn-warning">Giá thấp đến cao</button>
+                    <!-- Thêm nút sắp xếp theo giá giảm dần -->
+                    <button ng-click="setSortOrder('price', true)" class="btn btn-sm btn-warning">Giá cao đến thấp</button>                
+                    <!-- Thêm nút sắp xếp Z-A -->
+                    </div>
+                    <div class="col-md-3 mb-3 text-center py-4" ng-repeat="product in filteredProducts = (Products | filter:searchKeyword | orderBy: sortOrder: reverseSort | limitTo: itemsPerPage : (currentPage - 1) * itemsPerPage)">
+                      <form>                      
+                          <div class="position-relative" >
+                              <!-- Các phần tử sản phẩm tương tự như trong mã HTML của bạn -->
+                              <a href="#!/chitietsanpham/{{product.id}}">
+                              <div class="img-container" ng-click="toggleHeart(this)">
+                                  <div class="heart-icon">
+                                      <!-- Biểu tượng trái tim -->
+                                  </div>
+                                  <img ng-src="{{product.image}}" alt="Product Image" >
+                              </div>
+                            </a>
+                              <span class="badge bg-warning position-absolute top-0 start-0">
+                                  <!-- Biểu tượng giảm giá -->
+                                  <h6>Giảm giá</h6>
+                                  <h6>{{product.discount}}%</h6>
+                              </span>
+                              <h3 class="product-name">
+                                  <a href="/{{product.name}}" title="{{product.name}}">{{product.name}}</a>
+                              </h3>
+                              <div class="price-box">
+                                <span class="total-price">{{product.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}}</span><br>
+
+                                  <span class="compare-price">{{product.comparePrice | currency:"₫"}}</span>
+                                  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Thêm sản phẩm" ng-click="$root.addToCart(product)">
+                                    +
+                                </button>                               
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+                      
+                </div>
+                <div class="text-center">
+                    <button ng-click="setPage(1)" class="btn btn-success" ng-disabled="currentPage === 1"><i class="fa-solid fa-backward-fast"></i></button>
+                    <button ng-click="setPage(currentPage - 1)" class="btn btn-success" ng-disabled="currentPage === 1"><i class="fa-solid fa-caret-left"></i></button>
+                    <button ng-click="setPage(currentPage + 1)" class="btn btn-success" ng-disabled="currentPage === totalPages"><i class="fa-solid fa-caret-right"></i></button>
+                    <button ng-click="setPage(totalPages)" class="btn btn-success" ng-disabled="currentPage === totalPages"><i class="fa-solid fa-forward-fast"></i></button>
+                </div>
+                
+                
+          </div>
+		</div>
+	</div>
+</div>

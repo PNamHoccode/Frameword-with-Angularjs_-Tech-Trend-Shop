@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 text-white py-3">
+     Danh Mục Sản Phẩm
+    </div>
+    <div class="col-md-9">
+      <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+        <div class="container-fluid">
+          <a class="navbar-brand d-none" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!/home">Trang Chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Giới Thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Hỏi Đáp</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Sản Phẩm
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#!/Listproducts">Tất Cả Mặt Hàng</li>
+                  <li><a class="dropdown-item" href="#"></a></li>
+                 
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Tin Tức</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Tuyển Dụng</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Liên Hệ</a>
+              </li>
+              <div ng-controller="LangCtrl as lang">
+                <button ng-click="lang.changeLanguage('en')">English</button>
+                <button ng-click="lang.changeLanguage('vi')">Tiếng Việt</button>
+            </div>
+            
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>

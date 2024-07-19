@@ -1,0 +1,613 @@
+
+
+
+.box50{
+    width: 40px;
+    height:40px ;
+    text-align: center ;
+    line-height: 50px;
+    display: inline-block;
+}
+.imglogo{
+    width: 125px;
+    height: 125px;
+    border-radius: 120px;
+    filter: drop-shadow(3px 3px 20px rgb(8, 125, 17));
+    
+}
+.custom-input .form-control,
+.custom-input .input-group-text {
+    border-color: red; /* Màu viền bạn muốn áp dụng */
+}
+.imgslide{
+    max-width: 100%;
+    height: auto;
+    margin: 10px 174px;
+}
+.myfooter ul{
+list-style: none;
+padding: 0px;
+margin: 0px;
+}
+.myfooter ul>li>a{
+    text-decoration: none;
+    color: white;
+}
+.myfooter ul>li>a {
+    text-decoration: none;
+    color: #8b8e96;
+}
+.myfooter p {
+    text-decoration: none;
+    color: #8b8e96;
+}
+.ull ul>li>a{
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+}
+
+.footer ul {
+    padding: 0;
+    padding-top: 25px;
+}
+.product_list ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    
+   
+  }
+
+  .product_list li {
+    margin-right: -5px;
+    
+    display: inline-block;
+  }
+
+  .product_list li a {
+    text-decoration: none;
+    color: black;
+      font-weight: bold;
+      font-size: 12px;
+      margin: 12px 12px;
+  
+  }
+  .product_list li a:hover{
+    color: #ffc107;
+  }
+  .title-block strong {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: inline-block;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 20px 0 10px;
+    font-weight: bold;
+    color: #fff;
+    background: #eb3e32;
+}
+.title-block {
+  position: relative;
+}
+
+.title-block::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 1270px;
+  height: 2px;
+  background-color: rgb(240, 13, 13);
+}
+
+.titles-block strong {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: inline-block;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0 20px 0 10px;
+  font-weight: bold;
+  color: #fff;
+  background: #bde90c;
+  border-radius: 3px;
+}
+.titles-block {
+position: relative;
+}
+
+.titles-block::after {
+content: '';
+position: absolute;
+bottom: -2px;
+left: 0;
+width: 1270px;
+height: 2px;
+background-color: rgb(240, 13, 13);
+}
+.category-icon {
+    text-align: center;
+    width: 86px; /* Điều chỉnh kích thước của hình ảnh nhỏ */
+    
+    border-radius: 80%;
+    object-fit: cover; /* Đảm bảo hình ảnh không bị méo khi áp dụng border-radius */
+    object-position: center center;
+    margin: 10px 10px;
+  }
+  .category-icon img {
+    transition: transform 0.3s ease-in-out; /* Thêm hiệu ứng chuyển đổi mượt mà */
+  }
+
+  .category-icon:hover img {
+    transform: rotate(45deg); /* Quay hình ảnh 1 góc 25 độ khi di chuột vào */
+  }
+    
+  .category-icon h5 {
+    font-family: Arial, sans-serif;
+    opacity: 0.7;
+    font-size: 14px; /* Điều chỉnh kích thước font chữ thành 14px */
+  
+  }
+  .category-icon h5:hover{
+color: #ffc107; 
+  
+  }
+  .owl-carousel .item {
+    margin-right: 10px; /* Điều chỉnh khoảng cách ngang giữa các hình ảnh */
+  }
+  .carousel-inner .imgslide {
+    border-radius: 10px; /* Đặt bán kính bo góc là 10px */
+  }
+  .owl-stage{
+         transform: translate3d(-45px, 0px, 0px);
+  }
+  .carousel-inner .carousel-item img {
+    max-width: 1144px; /* Đặt chiều dài tối đa của slide là 500px */
+    height: 340px; /* Đảm bảo chiều cao tự động điều chỉnh */
+  }
+  .carousels-inner .carousel-item img {
+    max-width: 1144px; /* Đặt chiều dài tối đa của slide là 500px */
+    height: 340px; /* Đảm bảo chiều cao tự động điều chỉnh */
+  }
+/* Add this CSS to your stylesheet or in a <style> tag in your HTML file */
+
+.imgss{
+  width: 100%;
+  height: unset;
+}
+.product-name a{
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+ 
+}
+
+.compare-price{
+  text-decoration: line-through;
+}
+.price{
+  color: red;
+  font-weight: bold;
+}
+.position-relative {
+  position: relative;
+  display: inline-block;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.heart-icon svg {
+  fill: black; /* Màu mặc định của trái tim */
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  
+}
+.position-relative {
+  position: relative;
+  display: inline-block;
+}
+.position-relative {
+  position: relative;
+  display: inline-block;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+.img-container:hover .heart-icon {
+  display: block;
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s; /* Thêm hiệu ứng chuyển động */
+}
+
+.img-container:hover {
+  transform: scale(1.1); /* Phóng to khi hover vào */
+}
+
+.img-container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.heart-icon svg {
+  fill: black; /* Màu mặc định của trái tim */
+}
+
+.heart-icon.clicked svg {
+  fill: red; /* Màu khi đã thích sản phẩm */
+}
+.product-image {
+  max-width: 100%;
+  height: auto;
+}
+.jumbotron img {
+  transition: transform 0.3s, box-shadow 0.3s; /* Thêm hiệu ứng chuyển động và box-shadow cho ảnh */
+  border-radius: 25px;
+  height: 250px;
+}
+
+.jumbotron img:hover {
+  transform: scale(1.1); /* Phóng to ảnh khi hover vào */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Thêm bóng nhẹ */
+}
+.jumbotron .lead{
+font-weight: bold;
+font-size: 17px;
+}
+#page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 10s linear infinite; /* Điều chỉnh thời gian của chu kỳ quay thành 10 giây */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#successAlert {
+  max-width: 200px;
+  font-size: 0.8rem;
+  /* Hiệu ứng CSS cho thông báo rơi từ trên xuống */
+  animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
+}
+
+/* Thêm class để căn giữa thông báo */
+.d-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pageProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: black; /* Đặt màu nền thành đen */
+}
+
+.progress-bar {
+  height: 8px; /* Chiều cao của thanh tiến trình */
+  background-color: white; /* Màu của thanh tiến trình */
+}
+.console-window {
+  position: fixed;
+  bottom: 10px;
+  right: 10px; /* Thay đổi giá trị right để điều chỉnh vị trí bên phải */
+  width: 300px;
+  max-height: 200px;
+  background-color: #343a40;
+  color: #28a745;
+  padding: 10px;
+  overflow: auto;
+  resize: both;
+  border: 2px solid #28a745;
+  z-index: 1000;
+}
+
+.draggable {
+  cursor: grab;
+  user-select: none;
+}
+
+.draggable:active {
+  cursor: grabbing;
+}
+#page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#successAlert {
+  max-width: 200px;
+  font-size: 0.8rem;
+  /* Hiệu ứng CSS cho thông báo rơi từ trên xuống */
+  animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
+}
+
+/* Thêm class để căn giữa thông báo */
+.d-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#successAlert {
+  max-width: 200px;
+  font-size: 0.8rem;
+  /* Hiệu ứng CSS cho thông báo */
+  animation: scaleIn 0.5s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1001;
+}
+
+.d-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  margin-top: 60px;
+}
+
+@keyframes scaleIn {
+  0% {
+      transform: scale(0.5);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+.toast{
+  margin: 12px 12px;
+}
+
+.btn-link {
+  text-decoration: none;
+  background-color: yellow;
+  margin: 12px 12px;
+  
+}
+.category{
+  text-decoration: none;
+  color: black;
+}
+.category:hover{
+ color: yellow;
+}
+/* Thêm các kiểu dáng tùy chỉnh cho các nút sắp xếp */
+.sort-button {
+  display: flex; /* Hiển thị các nút theo chiều ngang */
+  gap: 10px; /* Khoảng cách giữa các nút */
+
+  
+}
+
+.btn-sm {
+  font-size: 15px; /* Kích thước chữ nhỏ hơn */
+  background-color:red;
+  color: white;
+}
+.imggiohang{
+  width:  161px;
+  height: 125px;
+}
+/* CSS để điều chỉnh lề cho trang giỏ hàng */
+div[ng-controller="myyCtrl"] {
+  margin: 20px; /* Đặt lề cho phần nội dung bên trong div */
+}
+
+/* CSS để điều chỉnh lề cho bảng */
+.table {
+  margin-top: 20px; /* Đặt lề phía trên của bảng */
+  margin-bottom: 20px; /* Đặt lề phía dưới của bảng */
+}
+
+/* CSS để điều chỉnh lề cho các hàng trong bảng */
+.table tbody tr {
+  margin-bottom: 10px; /* Đặt lề phía dưới của mỗi hàng */
+}
+
+/* CSS để điều chỉnh lề cho ảnh trong hàng */
+.imggiohang {
+  margin-right: 10px; /* Đặt lề bên phải của ảnh */
+}
+
+/* CSS để điều chỉnh lề cho các button trong hàng */
+td button {
+  margin-right: 5px; /* Đặt lề bên phải của các button */
+}
+
+  .custom-text-end {
+    text-align: right;
+    font-weight: bold;
+  }
+  .total-price {
+    color: red; /* Màu của số */
+  }
+  .login-box {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-box .user-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.login-box label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-box .alert-danger {
+    color: #ff0000;
+}
+
+.login-box .alert-success {
+    color: #00ff00;
+}
+
+.login-box button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background-color: #45a049;
+}
+/* CSS trong chitietsanpham.html hoặc tệp CSS của bạn */
+.product-detail {
+  display: flex;
+}
+
+
+.imgchitiet{
+  
+  width: 100%;
+  max-width: 417px;
+  
+  margin: 41px 25px;
+}
+.badge-info {
+  color: black; /* Màu chữ cho badge-info */
+}
+
+.badge-light {
+  color: black; /* Màu chữ cho badge-light */
+}
+
+.badge-dark {
+  color: black; /* Màu chữ cho badge-dark */
+}
+.muahang{
+  margin: 15px 77px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+li {
+  list-style-type: none;
+}
+.title{
+  font-weight: bold;
+}
+.col-sm-3 a {
+  text-decoration: none;
+}
+.col-sm-3 a:hover {
+  color: yellow;
+}
+
+
+
+
+
+
+
+/* Các style khác có thể thêm vào để tùy chỉnh giao diện */

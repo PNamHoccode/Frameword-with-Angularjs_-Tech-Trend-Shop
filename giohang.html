@@ -1,0 +1,41 @@
+<!-- Trang Giỏ Hàng -->
+<div ng-controller="myyCtrl">
+  <h2>Giỏ hàng của bạn</h2>
+  <table class="table">
+      <thead>
+          <tr>
+              <th>Ảnh</th>
+              <th>Tên sản phẩm</th>
+              <th>Giá</th>
+              <th>Số lượng</th>
+              <th>Hành động</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr ng-repeat="item in $root.getCartItems()">
+              <td><img ng-src="{{ item.image }}" alt="{{ item.name }}" class="imggiohang"></td>
+              <td>{{ item.name }}</td>
+              <td>{{ item.price | number }}</td>
+              <td>
+                  <button type="button" class="btn btn-secondary" ng-click="$root.updateCartItem(item.id, item.quantity - 1)">
+                      -
+                  </button>
+                  <span>{{ item.quantity }}</span>
+                  <button type="button" class="btn btn-secondary" ng-click="$root.updateCartItem(item.id, item.quantity + 1)">
+                      +
+                  </button>
+              </td>
+              <td>
+                  <button type="button" class="btn btn-danger" ng-click="$root.removeCartItem(item.id)">
+                      Xóa
+                  </button>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+  <div class="sumgiohang custom-text-end">
+  <p>Tổng số lượng: {{ $root.getTotalQuantity() }}</p>
+  <p ><span class="total-price"><p ng-if="$root.getTotalPrice()">{{ 'Tổng giá trị: ' + ($root.getTotalPrice() | number) + ' VNĐ' }}</p>
+  </span></p>
+</div>
+</div>
